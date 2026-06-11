@@ -6,7 +6,8 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "sha-266701d"
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: ghcr-secret
 nameOverride: ""
 fullnameOverride: ""
 
