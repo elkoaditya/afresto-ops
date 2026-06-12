@@ -41,7 +41,20 @@ service:
   port: 80
 
 ingress:
-  enabled: false
+  enabled: true
+  className: "nginx-dev"
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+  hosts:
+    - host: "api.afresto.co"
+      paths:
+        - path: "/exam"
+          pathType: Prefix
+  tls:
+    - secretName: "api-afresto-co-tls"
+      hosts:
+        - "api.afresto.co"
 
 resources:
   limits:
