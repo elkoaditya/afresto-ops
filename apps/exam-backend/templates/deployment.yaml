@@ -44,6 +44,35 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+            - name: HOST
+              value: {{ .Values.env.host | quote }}
+            - name: PORT
+              value: {{ .Values.env.port | quote }}
+            - name: JWT_SECRET
+              value: {{ .Values.env.jwtSecret | quote }}
+            - name: MONGODB_HOST
+              value: {{ .Values.env.mongodbHost | quote }}
+            - name: MONGODB_PORT
+              value: {{ .Values.env.mongodbPort | quote }}
+            - name: MONGODB_USER
+              value: {{ .Values.env.mongodbUser | quote }}
+            - name: MONGODB_PASSWORD
+              value: {{ .Values.env.mongodbPassword | quote }}
+            - name: MONGODB_DB
+              value: {{ .Values.env.mongodbDb | quote }}
+            - name: REDIS_HOST
+              value: {{ .Values.env.redisHost | quote }}
+            - name: REDIS_PORT
+              value: {{ .Values.env.redisPort | quote }}
+            - name: REDIS_PASSWORD
+              value: {{ .Values.env.redisPassword | quote }}
+            - name: WRITE_BEHIND_ENABLED
+              value: {{ .Values.env.writeBehindEnabled | quote }}
+            - name: WRITE_BEHIND_FLUSH_INTERVAL
+              value: {{ .Values.env.writeBehindFlushInterval | quote }}
+            - name: CORS_ALLOW_ORIGIN
+              value: {{ .Values.env.corsAllowOrigin | quote }}
           {{- with .Values.livenessProbe }}
           livenessProbe:
             {{- toYaml . | nindent 12 }}

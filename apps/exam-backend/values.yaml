@@ -78,3 +78,20 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# Environment variables for exam-backend
+env:
+  host: "0.0.0.0"
+  port: "80" # Di Kubernetes port pod 80
+  jwtSecret: "evaluasi-ai-jwt-secret-change-in-production"
+  mongodbHost: "10.254.52.3"
+  mongodbPort: "27017"
+  mongodbUser: "admin"
+  mongodbPassword: "4cWnKhzYnj3ad+R3TdZ5"
+  mongodbDb: "evaluasi_ai"
+  redisHost: "10.254.52.4"
+  redisPort: "6379"
+  redisPassword: "YbgWrLeAgEZfIyzM9zF8"
+  writeBehindEnabled: "true"
+  writeBehindFlushInterval: "5s"
+  corsAllowOrigin: "https://exam.afresto.id"
