@@ -46,10 +46,11 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
   hosts:
     - host: "api.afresto.co"
       paths:
-        - path: "/exam"
+        - path: "/exam/?(.*)"
           pathType: Prefix
   tls:
     - secretName: "api-afresto-co-tls"
