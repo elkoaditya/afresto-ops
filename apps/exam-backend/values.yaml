@@ -112,4 +112,4 @@ env:
   redisPassword: "YbgWrLeAgEZfIyzM9zF8"
   writeBehindEnabled: "true"
   writeBehindFlushInterval: "5s"
-  corsAllowOrigin: "https://exam.afresto.id"
+  corsAllowOrigin: "https://exam.afresto.id,https://exam-admin.afresto.id,https://exam.afresto.id/"
