@@ -1,0 +1,11 @@
+helm:
+  parameters:
+  - name: replicaCount
+    value: "1"
+    forcestring: false
+  - name: image.name
+    value: ghcr.io/fresto-code/exam-backend
+    forcestring: true
+  - name: image.tag
+    value: sha-8c45f00
+    forcestring: true
