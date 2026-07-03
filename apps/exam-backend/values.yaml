@@ -59,11 +59,11 @@ ingress:
 
 resources:
   limits:
-    cpu: 600m
-    memory: 180Mi
+    cpu: 300m
+    memory: 150Mi
     ephemeral-storage: 1Gi
   requests:
-    cpu: 100m
+    cpu: 50m
     memory: 64Mi
     ephemeral-storage: 50Mi
 
@@ -83,7 +83,7 @@ readinessProbe:
 autoscaling:
   enabled: true
   minReplicas: 3
-  maxReplicas: 8
+  maxReplicas: 15
   targetCPUUtilizationPercentage: 60
   targetMemoryUtilizationPercentage: 60
 
