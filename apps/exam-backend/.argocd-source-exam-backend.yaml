@@ -7,5 +7,5 @@ helm:
     value: ghcr.io/fresto-code/exam-backend
     forcestring: true
   - name: image.tag
-    value: sha-8c45f00
+    value: sha-64401ea
     forcestring: true
